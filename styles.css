@@ -3,6 +3,7 @@ body, * {
   margin: 0;
   font-family: "Roboto", sans-serif;
   color: hsl(234, 29%, 20%);
+  background-color: hsl(0, 0%, 100%);
   font-size: 16px;
   font-weight: 400;
 }
@@ -20,6 +21,10 @@ main {
   height: auto;
 }
 
+.fullHero {
+  display: none;
+}
+
 .intro {
   margin: 1rem 2rem 1rem 2rem;
 }
@@ -32,17 +37,29 @@ h1 {
 }
 
 ul {
-  margin: 2rem;
+  margin: 2rem 0 2rem 0;
 }
 
 li {
+  position: relative;
   background-image: url("assets/images/icon-list.svg");
   padding-left: 30px;
-  line-height: 10px;
+  line-height: 2px;
   background-repeat: no-repeat;
   list-style: none;
   line-height: 2rem;
-  text-align: start;
+}
+
+.signContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.errorSign {
+  display: none;
+  font-size: 0.9rem;
+  color: red;
 }
 
 .signUp h2 {
@@ -56,7 +73,7 @@ li {
   margin-bottom: 2rem;
 }
 
-#subscribeButton {
+.subBtn {
   padding: 1rem 2rem 1rem 2rem;
   background-color: hsl(234, 29%, 20%);
   color: white;
@@ -64,10 +81,10 @@ li {
   border-radius: 0.5rem;
 }
 
-#subscribeButton:hover {
+.subBtn:hover {
   background-color: #FF6155;
   scale: 1.1;
-  transform: 1s;
+  transition: 0.3s;
 }
 
 .successPop {
@@ -76,12 +93,22 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 3rem 2rem 2rem 2rem;
+  padding: 8rem 1rem 10rem 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   background-color: hsl(0, 0%, 100%);
 }
 .successPop b {
   font-weight: 700;
+}
+.successPop p {
+  margin: 3rem;
+}
+.successPop h1 {
+  margin: 2rem;
+  text-align: center;
 }
 
 #dismissBtn {
@@ -89,7 +116,7 @@ li {
   bottom: -10rem;
   left: 0;
   margin-top: 2rem;
-  width: 100%;
+  width: 80%;
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: hsl(234, 29%, 20%);
@@ -101,5 +128,41 @@ li {
 #dismissBtn:hover {
   background-color: #FF6155;
   scale: 1.1;
-  transform: 1s;
+  transition: 0.3s;
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border: 2px solid red;
+}
+
+@media screen and (min-width: 800px) {
+  body, *, main {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    background-color: hsl(235, 18%, 26%);
+  }
+  .hero {
+    display: none;
+  }
+  .fullHero {
+    display: flex;
+  }
+  main {
+    display: flex;
+    max-width: 60%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+  }
+  .intro {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=styles.css.map */

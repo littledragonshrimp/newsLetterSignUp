@@ -13,6 +13,8 @@ body, *{
     margin: 0;
     font-family: "Roboto", sans-serif;
     color: $darkgrey;
+    background-color: $white;
+  
     font-size: 16px;
     font-weight: 400; // also 700
     // background-image: linear-gradient(to right, #FF6A3A, #FF527B)
@@ -23,12 +25,16 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .hero{
     margin: 0;
     min-width: 100%;
     height: auto;
+}
+.fullHero{
+    display: none;
 }
 
 .intro{
@@ -44,18 +50,29 @@ h1{
 
 
 ul{
-    margin: 2rem;
+    margin: 2rem 0 2rem 0;;
  
 }
 li{
+    position: relative;
     background-image: url("assets/images/icon-list.svg");
     padding-left: 30px;
-    line-height: 10px;
+    line-height: 2px;
     background-repeat: no-repeat;
     list-style: none;
     // list-style-image: url("assets/images/icon-list.svg");
     line-height: 2rem;
-    text-align: start;
+}
+.signContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.errorSign{
+    display: none;
+    font-size: .9rem;
+    color: red;
 }
 
 .signUp{
@@ -71,7 +88,7 @@ li{
     }
 }
 
-#subscribeButton{
+.subBtn{
     padding: 1rem 2rem 1rem 2rem;
     background-color: $darkgrey;
     color: white;
@@ -79,38 +96,52 @@ li{
     border-radius: .5rem;
 }
 
-#subscribeButton:hover{
+.subBtn:hover{
     background-color: $orange;
     scale: 1.1;
-    transform: 1s;
+    transition: .3s;
 }
 
 
 ///success notification section
 
 .successPop{
-    
     display: none; // set to none in js
     z-index: 100;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 3rem 2rem 2rem 2rem;
+    padding: 8rem 1rem 10rem 1rem;
+    
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
     height: 100vh;
     background-color: $white;
     b{
         font-weight: 700;
     }
+    p{
+        margin: 3rem;
+    }
+    h1{
+        margin: 2rem;
+        text-align: center;
+    }
 }
+
 
 #dismissBtn{
     position: relative;
     bottom: -10rem;
     left: 0;
 
+
+
     margin-top: 2rem;
-    width: 100%;
+    width: 80%;
     padding-top: 1rem;
     padding-bottom: 1rem;
     
@@ -123,5 +154,46 @@ li{
 #dismissBtn:hover{
     background-color: $orange;
     scale: 1.1;
-    transform: 1s;
+    transition: .3s;
+}
+
+.error{
+    color: red;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border: 2px solid red;
+}
+
+@media screen  and (min-width: 800px){
+
+    body, *, main{
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        background-color: $charcoal;
+    }
+    .hero{
+        display: none;
+    }
+    .fullHero{
+        display: flex;
+    }
+
+    main{
+    display: flex;
+    max-width: 60%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $white;
+    }
+
+    .intro{
+        display: flex;
+        flex-direction: column;
+    
+    }
 }
