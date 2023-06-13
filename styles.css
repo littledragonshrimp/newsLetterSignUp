@@ -157,7 +157,7 @@ li {
 
 @media screen and (min-width: 800px) {
   body, html {
-    background-color: #1E1E1E;
+    background-color: hsl(234, 29%, 20%);
   }
   body, *, main {
     padding: 0;
@@ -170,7 +170,9 @@ li {
   .fullHero {
     display: flex;
     margin-right: 2rem;
+    margin-left: 2rem;
     width: auto;
+    max-width: 90%;
     height: 90%;
   }
   main {
@@ -216,7 +218,7 @@ li {
     display: none;
   }
   .disappearBackground {
-    background-color: #1E1E1E;
+    background-color: hsl(234, 29%, 20%);
   }
   .successPop {
     display: none;
