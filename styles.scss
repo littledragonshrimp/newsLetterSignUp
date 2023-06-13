@@ -24,11 +24,20 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;   
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    
+    margin: 2rem;
+    border-radius: 1rem;
+    background-color: $white;
 }
 
 .hero{
+    display: flex;
     margin: 0;
     min-width: 100%;
     height: auto;
@@ -37,9 +46,7 @@ main{
     display: none;
 }
 
-.intro{
-    margin: 1rem 2rem 1rem 2rem;
-}
+
 
 h1{
     margin-top: 2rem;
@@ -97,9 +104,11 @@ li{
 }
 
 .subBtn:hover{
-    background-color: $orange;
-    scale: 1.1;
+    background: linear-gradient(to bottom, #FF6A3A, #FF527B);
+    scale: 1.05;
     transition: .3s;
+    box-shadow: $orange 0px 0px 10px 0px;  
+    border: none;
 }
 
 
@@ -111,7 +120,7 @@ li{
     position: absolute;
     top: 0;
     left: 0;
-    padding: 8rem 1rem 10rem 1rem;
+    padding: 15rem 1rem 18rem 1rem;
     
 
     flex-direction: column;
@@ -135,7 +144,7 @@ li{
 
 #dismissBtn{
     position: relative;
-    bottom: -10rem;
+    bottom: -2rem;
     left: 0;
 
 
@@ -149,51 +158,156 @@ li{
     color: white;
     font-weight: 700;
     border-radius: .5rem;
+
+
 }
 
 #dismissBtn:hover{
     background-color: $orange;
     scale: 1.1;
     transition: .3s;
+    box-shadow: $orange 0px 0px 10px 0px;  
+    outline-style:none;
 }
 
 .error{
     color: red;
+    background-color: #fadede;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 1rem;
     border: 2px solid red;
 }
 
+.errorSign{
+    line-height: 2rem;
+}
+
 @media screen  and (min-width: 800px){
 
+    body, html{
+        background-color: $background;
+    }
     body, *, main{
         padding: 0;
         margin: 0;
+        font-size: 18px;
     }
 
-    body{
-        background-color: $charcoal;
-    }
     .hero{
         display: none;
     }
     .fullHero{
         display: flex;
+        margin-right: 2rem;
+        width: auto;
+        height: 90%;
     }
 
     main{
     display: flex;
-    max-width: 60%;
-    justify-content: center;
+    width: 60%;
+    min-width: 55rem;
+    max-width: 70rem;
+    height: 50rem;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    background-color: $white;
+    margin-top: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row-reverse;
+    border-radius: 2rem;
+    p, li, h2{
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
     }
 
-    .intro{
+    .content{
+        
         display: flex;
         flex-direction: column;
+        text-align: start;
+        background-color: $white;
+
+        h1{
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .signUp{
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .subBtn{
+        width: 100%;
+    }
+
+    .gone{
+        display: none;
+    }
+
+    .disappearBackground{
+        background-color: $background;
+    }
+
+    //successPop section Desktop
+
+.successPop{
+    display: none; // set to none in js
+    z-index: 100;
+
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-radius: 2rem;
+ 
+
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+    text-align: left;
+    padding: 0;
     
+    height: 35rem;
+    width: 35rem;
+    background-color: $white;
+
+    img{
+        align-self: start;
+        scale: 1.8;
+        margin-left: 3.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    b{
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+    p{
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    .successTitle{
+        text-align: start;
+        font-size: 3rem;
+    }
+    
+    button{
+        width: 100%;
+        scale: 1.1;
+        bottom: .5rem;
+    } 
     }
 }
