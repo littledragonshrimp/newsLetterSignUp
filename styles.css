@@ -168,7 +168,7 @@ li {
   }
   .fullHero {
     display: flex;
-    margin-right: 2rem;
+    margin-right: 1rem;
     margin-left: 0;
     width: auto;
     max-width: 90%;
@@ -179,7 +179,7 @@ li {
     width: 60%;
     min-width: 45rem;
     max-width: 48rem;
-    height: 30rem;
+    height: 40rem;
     justify-content: space-between;
     align-items: center;
     margin-top: 8rem;
@@ -198,11 +198,12 @@ li {
     text-align: start;
     background-color: hsl(0, 0%, 100%);
     margin-left: 2rem;
+    margin-right: 2rem;
   }
   .content h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
   }
   .content ul {
     margin-top: 1rem;
