@@ -210,8 +210,8 @@ li{
     main{
     display: flex;
     width: 60%;
-    min-width: 45rem;
-    max-width: 48rem;
+    min-width: 48rem;
+    max-width: 53rem;
     height: 40rem;
     justify-content: space-between;
     align-items: center;
@@ -223,7 +223,7 @@ li{
  
     p, li, h2{
         font-size: 1rem;
-        line-height: 1rem;
+        line-height: 1.4rem;
         }
     }
 
@@ -233,8 +233,8 @@ li{
         flex-direction: column;
         text-align: start;
         background-color: $white;
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-left: 4rem;
+        margin-right: 3rem;
 
         h1{
             font-size: 2.5rem;
