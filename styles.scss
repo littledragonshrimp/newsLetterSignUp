@@ -200,7 +200,7 @@ li{
     .fullHero{
         display: flex;
         margin-right: 2rem;
-        margin-left: 2rem;
+        margin-left: 0;
         width: auto;
         max-width: 90%;
         height: 90%;
@@ -209,9 +209,9 @@ li{
     main{
     display: flex;
     width: 60%;
-    min-width: 55rem;
-    max-width: 65rem;
-    height: 40rem;
+    min-width: 45rem;
+    max-width: 50rem;
+    height: 30rem;
     justify-content: space-between;
     align-items: center;
     margin-top: 8rem;
@@ -220,22 +220,30 @@ li{
     flex-direction: row-reverse;
     border-radius: 2rem;
     p, li, h2{
-        font-size: 1.2rem;
-        line-height: 2rem;
+        font-size: 1rem;
+        line-height: 1.2rem;
     }
     }
 
     .content{
-        
+     
         display: flex;
         flex-direction: column;
         text-align: start;
         background-color: $white;
+        margin-left: 2rem;
 
         h1{
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 2rem;
+            margin-bottom: .5rem;
+        }
+
+        ul{
+            margin-top: 1rem;
+        }
+        li{
+            margin-top: .8rem;
         }
     }
 
