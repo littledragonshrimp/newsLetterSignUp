@@ -156,7 +156,7 @@ li {
 
 @media screen and (min-width: 800px) {
   body, html {
-    background-color: hsl(234, 29%, 20%);
+    background-color: hsl(235, 18%, 26%);
   }
   body, *, main {
     padding: 0;
@@ -181,7 +181,7 @@ li {
     height: 40rem;
     justify-content: space-between;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 10rem;
     margin-left: auto;
     margin-right: auto;
     flex-direction: row-reverse;
@@ -224,7 +224,7 @@ li {
     display: none;
   }
   .disappearBackground {
-    background-color: hsl(234, 29%, 20%);
+    background-color: hsl(235, 18%, 26%);
   }
   .successPop {
     display: none;
