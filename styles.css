@@ -176,9 +176,8 @@ li {
   }
   main {
     display: flex;
-    width: 60%;
-    min-width: 48rem;
-    max-width: 53rem;
+    min-width: 45rem;
+    max-width: 54rem;
     height: 40rem;
     justify-content: space-between;
     align-items: center;
